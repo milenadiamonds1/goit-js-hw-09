@@ -62,14 +62,14 @@ const options = {
       refs.input.disabled = true;
     }
   }
-  function onAddZero(value) {
+  function addLeadingZero(value) {
     return value.toString().padStart(2, '0');
   }
   function onTimeConvert({ days, hours, minutes, seconds }) {
-    refs.days.textContent = onAddZero(days);
-    refs.hours.textContent = onAddZero(hours);
-    refs.minutes.textContent = onAddZero(minutes);
-    refs.seconds.textContent = onAddZero(seconds);
+    refs.days.textContent = addLeadingZero(days);
+    refs.hours.textContent = addLeadingZero(hours);
+    refs.minutes.textContent = addLeadingZero(minutes);
+    refs.seconds.textContent = addLeadingZero(seconds);
   }
   function convertMs(ms) {
     // Number of milliseconds per unit of time
